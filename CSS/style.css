@@ -9,9 +9,6 @@ body{
 #menu{
     display: none;
 }
-#nav-item{
-    display: none;
-}
 span{
     color: #DDFBD2;
 }
@@ -268,15 +265,17 @@ input{
     }
 }
 @media screen and (max-width: 500px){
-    #menu {
+    #navbar {
         position: relative;
         display: inline-block;
       }
-      
-       ul{
+      #menu{
+        display: inline-block;
+      }
+       #nav-item {
         display: none;
         position: absolute;
-        background-color: #f9f9f9;
+        background-color: rgb(0, 0, .1);
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
@@ -287,13 +286,14 @@ input{
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+        
       }
       
        ul a:hover {
-           background-color: #f1f1f1;    
+           text-decoration: underline;  
     }
       
-      #menu:hover ul{
+      #navbar:hover #nav-item{
         display: block;
       }
       
